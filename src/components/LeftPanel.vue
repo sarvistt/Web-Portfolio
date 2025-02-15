@@ -13,6 +13,8 @@
         <span class="flex-shrink mx-2 text-black">Links</span>
         <div class="flex-grow border-t border-black"></div>
       </div>
+      
+      <Links />
 
     </div>
 </template>
