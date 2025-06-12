@@ -1,7 +1,7 @@
 <template>
-  <div class="">
+  <div class="p-1 bg-gradient-to-r from-orange-400 via-pink-500 to-red-500 rounded-full">
     <img 
-      class="rounded-full w-48 h-48 border-4 shadow-lg border-gray-300"
+      class="rounded-full w-36 h-36 shadow-lg"
       src="../assets/profile.png" 
     />
   </div>

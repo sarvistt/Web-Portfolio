@@ -1,0 +1,4 @@
+- add links
+- change favicon
+- linter
+- host it
