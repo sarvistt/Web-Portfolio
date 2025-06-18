@@ -33,7 +33,7 @@
                                     <img src="../assets/linkedin.svg" alt="linkedin" class="w-8 h-8 mr-2" />
                                     LinkedIn
                                 </li>
-                                <li class="flex items-center mb-2 hover:text-black hover:cursor-pointer" @click="goToLink('https://www.leetcode.com/sarvistt')">
+                                <li class="flex items-center mb-2 hover:text-black hover:cursor-pointer" @click="goToLink('https://www.leetcode.com/sarvist')">
                                    <img src="../assets/leetcode.svg" alt="leetcode" class="w-8 h-8 mr-2" />
                                     LeetCode
                                 </li>
@@ -101,7 +101,7 @@ export default {
             window.open(url, '_blank');
         },
         formEmail() {
-            window.location.href = 'mailto:sar.com' // M<ake a new email before committing
+            window.location.href = 'mailto:sarvist@outlook.com' // M<ake a new email before committing
         }
     }
 }

@@ -20,7 +20,7 @@
                         <a href="/about" class="hover:underline me-4 md:me-6">About</a>
                     </li>
                     <li>
-                        <a href="mailto:sar.com" class="hover:underline">Contact</a> <!-- fix email-->
+                        <a href="mailto:sarvist@outlook.com" class="hover:underline">Contact</a> <!-- fix email-->
                     </li>
                 </ul>
             </div>
