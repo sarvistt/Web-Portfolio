@@ -32,13 +32,10 @@ export default {
 </script>
 
 <style scoped>
-
 .huh {
   background-color: white;
   background-image: 
-  radial-gradient(circle at 50% -20%, #80bdff, #a4c7ff, #c0d2ff, #d8dffe, #ebecfe, #f2f2fe, #f9f8ff, #ffffff, #ffffff, #ffffff, #ffffff, #ffffff, transparent 75%),
-    radial-gradient(circle at 50% 120%, #80bdff, #a4c7ff, #c0d2ff, #d8dffe, #ebecfe, #f2f2fe, #f9f8ff, #ffffff, #ffffff, #ffffff, #ffffff, #ffffff, transparent 75%);
+  radial-gradient(circle at 50% -20%, #FB923C, #ff987f, #ffb389, #ffc6e4, #fbecff, #f9f8ff, #f9f8ff, #ffffff, #ffffff, #ffffff, #ffffff, #ffffff, transparent 75%),
+    radial-gradient(circle at 50% 120%, #FB923C, #ff987f, #ffb389, #ffc6e4, #fbecff, #f9f8ff, #f9f8ff, #ffffff, #ffffff, #ffffff, #ffffff, #ffffff, transparent 75%);
 }
-
-
 </style>

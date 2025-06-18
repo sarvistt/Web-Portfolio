@@ -7,7 +7,7 @@
             <div class="sm:flex sm:items-center sm:justify-between mb-2">
                 <div class="flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse">
                     <img src="../assets/init.svg" class="h-8" alt="Flowbite Logo" />
-                    <span class="self-center text-2xl font-semibold whitespace-nowrap">Tim Sarvis</span>
+                    <span class="self-center text-xl whitespace-nowrap">Site Still Under Construction!</span>
                 </div>
                 <ul class="flex flex-wrap items-center mb-6 text-sm font-medium text-gray-500 sm:mb-0">
                     <li>
