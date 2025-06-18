@@ -1,4 +1,7 @@
-- add links
 - change favicon
 - linter
 - host it
+- make it work on mobile too
+- finish
+- on blog page, do work in progress
+-fix leetcode link

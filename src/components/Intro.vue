@@ -1,10 +1,9 @@
 <template>
-    <div class="flex flex-row items-center justify-between gap-8 mx-auto w-full mt-[130px] max-h-[200px]" style="min-height: 160px;">
+    <div class="flex flex-row items-center justify-between gap-8 mx-auto w-full mt-[130px] max-h-[250px]">
         <div class="flex-1 flex items-center">
-            <span class="text-3xl font-extrabold leading-none tracking-tight text-gray-900 font-sf">
+            <span class="text-3xl font-bold font-sf leading-[1.5] tracking-tight text-gray-900 w-[80%]">
                 Hi, I'm Tim! 
                 <br /> 
-                <br />
                 A Full Stack Engineer building
                 <transition name="fade" mode="out-in">
                     <span :key="currentIndex" class="gradient-text">
@@ -27,7 +26,7 @@ export default {
     name: 'Intro',
     data () {
         return {
-            listOfAdjectives: ['Amazing', 'Stunning', 'Interesting?', 'Quirky?', 'Definity Sophisticated'],
+            listOfAdjectives: ['Amazing', 'Stunning', 'Interesting?', 'Quirky?'],
             currentIndex: 0
         }
     },
@@ -43,7 +42,7 @@ export default {
     mounted() {
         setInterval(() => {
             this.currentIndex = (this.currentIndex + 1) % this.listOfAdjectives.length
-        }, 20000)
+        }, 2000)
     }
 }
 </script>

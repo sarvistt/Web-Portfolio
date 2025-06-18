@@ -3,7 +3,7 @@
         <Header class="px-8"/>
         <div class="flex flex-col max-w-5xl w-full mx-auto flex-1">
             <span class="w-full">
-                <h1 class="text-4xl font-bold text-center mt-32 mb-5">Projects</h1>
+                <h1 class="text-4xl font-bold text-center mt-32 mb-5">Blog</h1>
             </span>
             <p class="text-center text-lg mb-10">Coming soon, stay tuned!</p>
         </div>
