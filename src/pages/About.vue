@@ -1,31 +1,33 @@
 <template>
-    <div class="huh min-h-screen flex flex-col">
-        <Header class="px-8"/>
-        <div class="flex flex-col max-w-5xl w-full mx-auto flex-1">
-            <span class="w-full">
-                <h1 class="text-4xl font-bold text-center mt-32 mb-5">About</h1>
-            </span>
-            <p class="text-center text-lg mb-10">Coming soon, stay tuned!</p>
-        </div>
-        <div class="w-full flex justify-center">
-            <div class="max-w-5xl w-full px-8">
-                <Footer class="mt-32"/>
-            </div>
-        </div>
+  <div class="huh min-h-screen flex flex-col">
+    <WebsiteHeader class="md:px-8 mx-5" />
+    <div class="flex flex-col max-w-5xl w-full mx-auto flex-1">
+      <span class="w-full">
+        <h1 class="text-4xl font-bold text-center mt-32 mb-5">About</h1>
+      </span>
+      <p class="text-center text-lg mb-10">
+        Coming soon, stay tuned!
+      </p>
     </div>
+    <div class="w-full flex justify-center">
+      <div class="max-w-5xl w-full px-8">
+        <WebsiteFooter class="mt-32" />
+      </div>
+    </div>
+  </div>
 </template>
 
 
 
 <script>
-import Header from '../components/Header.vue'
-import Footer from '../components/Footer.vue'
+import WebsiteHeader from '../components/WebsiteHeader.vue'
+import WebsiteFooter from '../components/WebsiteFooter.vue'
 
 export default {
     name: 'Blog',
     components: {
-        Header,
-        Footer
+        WebsiteHeader,
+        WebsiteFooter
     },
 }
 

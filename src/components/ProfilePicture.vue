@@ -3,7 +3,7 @@
     <img 
       class="rounded-full w-36 h-36 shadow-lg"
       src="../assets/profile.png" 
-    />
+    >
   </div>
 </template>
 
