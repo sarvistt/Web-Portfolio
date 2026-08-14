@@ -1,5 +1,21 @@
-# Vue 3 + TypeScript + Vite
+# Tim Sarvis — Test Engineer Profile (Vue + Tailwind)
 
-This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+A retro-synthwave-styled portfolio page with a draggable wireframe laptop built in Three.js.
+Styled entirely with Tailwind CSS utility classes.
 
-Learn more about the recommended Project Setup and IDE Support in the [Vue Docs TypeScript Guide](https://vuejs.org/guide/typescript/overview.html#project-setup).
+## Setup
+
+```bash
+npm install
+npm run dev
+```
+
+Then open the local URL Vite prints (usually http://localhost:5173).
+
+## Build for production
+
+```bash
+npm run build
+```
+
+Output goes to `dist/`.
