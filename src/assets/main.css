@@ -1,0 +1,159 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-bg text-paper font-sans overflow-x-hidden relative;
+    text-shadow: 0 1px 3px rgba(3, 8, 14, 0.5);
+  }
+  a:focus-visible,
+  button:focus-visible {
+    @apply outline outline-2 outline-cyan outline-offset-[3px];
+  }
+}
+
+@layer components {
+  /* scroll-reveal, toggled by the v-reveal directive */
+  .reveal {
+    @apply opacity-0 translate-y-6 transition-all duration-700 ease-out;
+  }
+  .reveal.in-view {
+    @apply opacity-100 translate-y-0;
+  }
+
+  /* shared buttons (hero + contact) */
+  .btn {
+    @apply font-mono text-xs tracking-wider uppercase no-underline px-6 py-3.5 border border-cyan-dim text-paper inline-flex items-center gap-2.5 bg-transparent cursor-pointer transition-all duration-200;
+  }
+  .btn:hover {
+    @apply border-cyan -translate-y-0.5;
+    box-shadow: 0 8px 24px rgba(111, 231, 221, 0.15);
+  }
+  .btn-primary {
+    @apply bg-cyan text-[#06161f] border-cyan font-bold;
+  }
+  .btn-primary:hover {
+    box-shadow: 0 8px 24px rgba(111, 231, 221, 0.35);
+  }
+
+  /* shared project-tech chip */
+  .chip {
+    @apply font-mono text-[10px] px-2.5 py-1.5 border border-cyan-dim text-cyan-dim tracking-wide;
+  }
+
+  /* hand-drawn wavy rule used after numbered section headings */
+  .section-rule {
+    @apply flex-1 opacity-80;
+    height: 8px;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='60' height='8' viewBox='0 0 60 8'><path d='M0 4 Q7 0 14 4 T28 4 T42 4 T56 4' fill='none' stroke='%23c4a882' stroke-width='1.3'/></svg>");
+    background-repeat: repeat-x;
+    background-position: left center;
+  }
+
+  /* hand-drawn underline squiggle under the hero's accent phrase */
+  .hero-underline {
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='14' viewBox='0 0 300 14'><path d='M2 8 Q40 2 80 8 T160 7 T240 9 T298 6' fill='none' stroke='%23e8823c' stroke-width='2.4' stroke-linecap='round'/></svg>");
+    background-repeat: no-repeat;
+    background-position: left bottom -2px;
+    background-size: 100% auto;
+  }
+
+  /* small hand-drawn squiggle connector inside the laptop annotations */
+  .annotation-line {
+    @apply inline-block align-middle mx-1;
+    width: 30px;
+    height: 10px;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='30' height='10' viewBox='0 0 30 10'><path d='M0 5 Q8 1 15 5 T30 5' fill='none' stroke='%233d7f78' stroke-width='1.2'/></svg>");
+    background-repeat: no-repeat;
+  }
+
+  /* subtle paper grain so backgrounds don't feel like flat vector fill */
+  .grain-bg {
+    @apply fixed inset-0 z-[3] pointer-events-none opacity-[0.05];
+    mix-blend-mode: overlay;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='140' height='140'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+  }
+
+  /* halftone dot-screen, like a cheaply-printed poster or title card */
+  .halftone-bg {
+    @apply fixed inset-0 z-[3] pointer-events-none opacity-[0.05];
+    mix-blend-mode: overlay;
+    background-image: radial-gradient(circle, rgba(240, 230, 210, 0.9) 1px, transparent 1.2px);
+    background-size: 4px 4px;
+  }
+
+  /* darkened corners so the page reads like a printed/projected frame, not a flat screen */
+  .vignette-bg {
+    @apply fixed inset-0 z-[1] pointer-events-none;
+    background: radial-gradient(ellipse at center, transparent 45%, rgba(5, 4, 6, 0.55) 100%);
+  }
+
+  /* retro-futuristic space scene — dusty gradient sky, warm stars, an amber moon, CRT scanlines */
+  .space-sky {
+    @apply absolute inset-0;
+    background: linear-gradient(
+      180deg,
+      #08070a 0%,
+      #14101a 22%,
+      #241a28 42%,
+      #4a2a2e 62%,
+      #8a4a30 78%,
+      #2a1810 88%,
+      #0d0b10 100%
+    );
+  }
+  .space-stars {
+    @apply absolute inset-0;
+    background-repeat: no-repeat;
+    background-image: radial-gradient(1px 1px at 10% 15%, rgba(240, 230, 210, 0.55) 50%, transparent 51%),
+      radial-gradient(1px 1px at 30% 8%, rgba(240, 230, 210, 0.4) 50%, transparent 51%),
+      radial-gradient(1.5px 1.5px at 55% 20%, rgba(240, 230, 210, 0.6) 50%, transparent 51%),
+      radial-gradient(1px 1px at 72% 5%, rgba(240, 230, 210, 0.35) 50%, transparent 51%),
+      radial-gradient(1px 1px at 85% 25%, rgba(240, 230, 210, 0.5) 50%, transparent 51%),
+      radial-gradient(1.5px 1.5px at 20% 35%, rgba(240, 230, 210, 0.4) 50%, transparent 51%),
+      radial-gradient(1px 1px at 45% 40%, rgba(240, 230, 210, 0.3) 50%, transparent 51%),
+      radial-gradient(1px 1px at 95% 45%, rgba(240, 230, 210, 0.4) 50%, transparent 51%),
+      radial-gradient(1px 1px at 63% 32%, rgba(240, 230, 210, 0.3) 50%, transparent 51%),
+      radial-gradient(1px 1px at 5% 42%, rgba(240, 230, 210, 0.35) 50%, transparent 51%),
+      radial-gradient(1px 1px at 40% 12%, rgba(240, 230, 210, 0.3) 50%, transparent 51%),
+      radial-gradient(1px 1px at 88% 55%, rgba(240, 230, 210, 0.3) 50%, transparent 51%);
+  }
+  .space-moon {
+    @apply absolute;
+    top: 9%;
+    right: 12%;
+    width: min(22vw, 220px);
+    height: min(22vw, 220px);
+    border-radius: 50%;
+    background-image: radial-gradient(circle at 62% 32%, rgba(92, 44, 20, 0.55) 0%, transparent 30%),
+      radial-gradient(circle at 40% 62%, rgba(92, 44, 20, 0.4) 0%, transparent 22%),
+      radial-gradient(circle at 30% 28%, #f2cf9e 0%, #e8823c 38%, #a85526 68%, #4a2410 100%);
+    box-shadow: 0 0 70px 14px rgba(232, 130, 60, 0.16);
+  }
+  .space-scanlines {
+    @apply fixed inset-0 z-[3] pointer-events-none;
+    opacity: 0.14;
+    background-image: repeating-linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.55) 0px,
+      rgba(0, 0, 0, 0.55) 1px,
+      transparent 1px,
+      transparent 3px
+    );
+  }
+  .space-scrim {
+    @apply fixed inset-0 z-0 pointer-events-none;
+    background: rgba(13, 11, 16, 0.55);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
