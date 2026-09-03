@@ -4,15 +4,16 @@ import SectionHead from './SectionHead.vue'
 const projects = [
   {
     tag: 'PROJECT / 01',
-    title: 'First project coming soon',
-    desc: 'soon (tm)',
+    title: 'Marvel Legendary Solo Emulator',
+    desc: 'Fully functional emulator for the Marvel Legendary board game! Created with Vue, TypeScript, and TailwindCSS. Features include a full solo play, a custom draft mode, and a rogue like mode!',
+    link: 'https://legendarysolo.netlify.app/',
     tech: ['Vue', 'TypeScript', 'Tailwind'],
     rotate: 'rotate-[0.4deg]'
   },
   {
     tag: 'PROJECT / 02',
-    title: 'Second one not far behind',
-    desc: "soon (tm) too",
+    title: 'Second Project',
+    desc: 'A second project that is not far behind the first one.',
     tech: ['Vue', 'JavaScript'],
     rotate: '-rotate-[0.6deg]'
   },
@@ -34,7 +35,18 @@ const projects = [
       >
         <div class="font-mono text-[10px] text-orange tracking-wider">{{ project.tag }}</div>
         <h3 class="font-mono mt-3.5 text-lg">{{ project.title }}</h3>
-        <p class="mt-3 text-muted text-sm leading-relaxed">{{ project.desc }}</p>
+        <p class="mt-3 text-muted text-sm leading-relaxed">
+          {{ project.desc }}
+          <a
+            v-if="project.link"
+            :href="project.link"
+            target="_blank"
+            rel="noreferrer"
+            class="text-cyan underline underline-offset-4 decoration-cyan/70 transition-colors hover:text-cyan-light"
+          >
+            {{ project.link }}
+          </a>
+        </p>
         <div class="mt-5 flex gap-2.5 flex-wrap">
           <span class="chip" v-for="tech in project.tech" :key="tech">{{ tech }}</span>
         </div>
